@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<title>Brainpower MessengerBot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 430px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <a href="https://www.colemaninstitute.org/" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
+        <a href="index.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About the project</a>
+        <a href="features.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Features</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research Documents</a>
+    </div>
+    </div>
+    
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_open()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+    </a>
+    <h4 class="w3-bar-item"><b>Try our chatbot here!</b></h4>
+    <div>
+        <iframe height="700" width="430" aria-label="Demo" src="https://bot.dialogflow.com/aa9e5ce3-1b2c-4a85-b463-dbeead245f78" style="border:none;"></iframe>
+    </div>
+    </nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:420px">
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Features List</h1>
+      <p>These are some of the features that MessengerBot has! Feel free to try them out on the left hand column or drop
+          down menu if on mobile.
+      </p>
+        <ul>
+          <li><a href="">Log into Facebook</a></li>
+          <li><a href="">Navigate to friend's profile</a></li>
+          <li><a href="">Reset Facebook password</a></li>
+          <li><a href="">Block a person</a></li>
+          <li><a href="#Privacy">Check Facebook privacy settings</a></li>
+          <li><a href="">Get a friend's info</a></li>
+        </ul>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="logo.jpg" height="212" width="291">
+    </div>
+  </div>
+
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal" id="Privacy">Privacy</h1>
+            <p>Privacy is important for many people with cognitive impairment. It is non-trivial to ensure that a facebook page is set to the appropriate levels of privacy for the user. Some reasons a user with a cognitive disability might wish to have more privacy than the average user include imparement in judgement of unknown user intent.
+                Brainpower bot can help the user by walking them through setting their privacy settings on Facebook.
+                You can ask the following of the bot to get privacy help.
+            </p>
+            <ul>
+                <li>Help me set privacy settings.</li>
+                <li>some weirdo is liking my posts.</li>
+            </ul>
+        </div>
+    </div>
+  
+
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

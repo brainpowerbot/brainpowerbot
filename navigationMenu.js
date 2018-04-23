@@ -1,4 +1,4 @@
 var files = {
-	"index.md" : "home",
+	"index.md" : "Home",
 	"privacy.md" : "Privacy Settings Checkup",
 }

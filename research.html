@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<title>Brainpower MessengerBot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 430px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+    <div class="w3-top">
+    <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+        <a href="https://www.colemaninstitute.org/" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
+        <a href="index.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About the project</a>
+        <a href="features.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Features</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research Documents</a>
+    </div>
+    </div>
+
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_open()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+        <i class="fa fa-remove"></i>
+    </a>
+    <h4 class="w3-bar-item"><b>Try our chatbot here!</b></h4>
+    <div>
+        <iframe height="700" width="430" aria-label="Demo" src="https://bot.dialogflow.com/aa9e5ce3-1b2c-4a85-b463-dbeead245f78" style="border:none;"></iframe>
+    </div>
+    </nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:420px">
+
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Research</h1>
+            <p>
+                A lot of research went into this project and this section will highlight all the big decisions taken and why we chose them.
+            </p>
+            <ul>
+                    <li><a href="">Framework choice</a></li>
+                <li><a href="#Facebook">Facebook & Facebook API limitations</a></li>
+            </ul>
+        </div>
+        <div class="w3-third w3-container">
+            <img src="logo.jpg" height="212" width="291">
+        </div>
+    </div>
+
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal" id="Facebook">Facebook & Facebook API Limitations</h1>
+            <p>
+                The reason for making an entire project around Facebook is because Facebook can provide more details of relantionships
+                between people better than any other social media platform. Facebook has more information and connections that we can then
+                use to make our bot as helpful to our target audience as possible.
+            </p>
+            <p>
+                Even though Facebook is the platform with the most information that is useful to us, their access to this information is very limited.
+                With security and privacy concerns constantly sorrounding Facebook, they have restricted public access to data from their
+                API. With these data restrictions in place, it was very difficult getting the information we needed for this project. 
+                Instead, what we decided to do was create a test environment where we could have staged data to come up with a proof
+                of concept for our ideas. For a full understanding of what data exactly we were not allowed access to please download
+                our <a href="">Facebook API reaserch document.</a>
+            </p>
+        </div>
+    </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
