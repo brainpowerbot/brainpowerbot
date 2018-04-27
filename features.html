@@ -22,10 +22,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
 <div class="w3-top">
     <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
         <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-        <a href="https://www.colemaninstitute.org/" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
+        <a href="https://www.colemaninstitute.org/" target="_blank" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
         <a href="index.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About the project</a>
         <a href="features.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Features</a>
         <a href="research.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research Documents</a>
+        <a href="lessonsLearned.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons Learned</a>
     </div>
     </div>
     
@@ -52,12 +53,12 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
           down menu if on mobile.
       </p>
         <ul>
-          <li><a href="">Log into Facebook</a></li>
-          <li><a href="">Navigate to friend's profile</a></li>
-          <li><a href="">Reset Facebook password</a></li>
-          <li><a href="">Block a person</a></li>
-          <li><a href="#Privacy">Check Facebook privacy settings</a></li>
-          <li><a href="">Get a friend's info</a></li>
+          <li><a href="#FacebookLogin">Log into Facebook</a></li>
+          <li><a href="#FriendProfile">Go to a friend's profile</a></li>
+          <li><a href="#FacebookPassword">Reset your Facebook password</a></li>
+          <li><a href="#Block">Block a person</a></li>
+          <li><a href="#Privacy">Check your Facebook privacy settings</a></li>
+          <li><a href="#FriendInfo">Get a friend's and/or my basic info</a></li>
         </ul>
     </div>
     <div class="w3-third w3-container">
@@ -65,19 +66,106 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
     </div>
   </div>
 
-    <div class="w3-row w3-padding-64">
+  <div class="w3-row w3-padding-64" id="FacebookLogin">
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Log into Facebook</h1>
+        <p>
+            Some cognitive impairments we focused on revolve around difficulties with memories.
+            Our bot can help navigate Facebook's platform by giving simple instructions on how to do things.
+            This feature helps people log into their Facebook.
+            Since user privacy is something we think is very important, we will never ask the user to input or store their username or password.
+            This just serves as a tutorial on how to log into Facebook in the case that they ever get signed out of their account.
+            You can ask the following of the bot to get help logging into Facebook.
+        </p>
+        <ul>
+            <li>"Help me log into Facebook"</li>
+            <li>"How do I login?"</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="FriendProfile">
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Go to a friend's profile</h1>
+        <p>
+            Some cognitive impairments we focused on revolve around difficulties with memories and understanding complex language.
+            Our bot can help navigate Facebook's platform by giving simple instructions on how to do things.
+            Facebook's platform could be confusing to navigate, for some people, and this feature helps by telling the user multiple ways of getting to their friend's profile.
+            You can ask the following of the bot to get help going to a friend's profile page
+        </p>
+        <ul>
+            <li>"Can you take me to my friend's profile page?"</li>
+            <li>"How to go to a friend's profile page?"</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="FacebookPassword">
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Reset your Facebook password</h1>
+        <p>
+            Some cognitive impairments we focused on revolve around difficulties with memories.
+            Our bot can help navigate Facebook's platform by giving simple instructions on how to do things.
+            This feature helps people reset their Facebook password.
+            Since user privacy is something we think is very important, we will never ask the user to input or store their username or password.
+            This just serves as a tutorial on how to reset their password in the case that they forget their password and/or the user feels like their account has been hacked.
+            You can ask the following for our bot to get help reseting your Facebook password.
+        </p>
+        <ul>
+            <li>"I forgot my password, can you help?"</li>
+            <li>"Could you help me reset my password?"</li>
+        </ul>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="Block">
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Block a person</h1>
+        <p>
+            Some cognitive disabilities can make detecting malicious efforts from others difficult.
+            Sometimes people just really want to block someone.
+            If people feel uncomfortable with someone on Facebook, they should know the necessary steps to block that person if necessary.
+            This feature guides the user, step by step, on how to block somebody.
+            You can ask the following to get help blocking somebody.
+        </p>
+        <ul>
+            <li>"How do I block someone?"</li>
+            <li>"Can you help me block a person?"</li>
+        </ul>
+    </div>
+  </div>
+  
+  <div class="w3-row w3-padding-64" id="Privacy">
         <div class="w3-twothird w3-container">
-            <h1 class="w3-text-teal" id="Privacy">Privacy</h1>
-            <p>Privacy is important for many people with cognitive impairment. It is non-trivial to ensure that a facebook page is set to the appropriate levels of privacy for the user. Some reasons a user with a cognitive disability might wish to have more privacy than the average user include imparement in judgement of unknown user intent.
+            <h1 class="w3-text-teal">Check your Facebook privacy settings</h1>
+            <p>
+                Privacy is important for many people with cognitive impairment. It is non-trivial to ensure that a facebook page is set to the appropriate levels of privacy for the user. Some reasons a user with a cognitive disability might wish to have more privacy than the average user include imparement in judgement of unknown user intent.
                 Brainpower bot can help the user by walking them through setting their privacy settings on Facebook.
                 You can ask the following of the bot to get privacy help.
             </p>
             <ul>
-                <li>Help me set privacy settings.</li>
-                <li>some weirdo is liking my posts.</li>
+                <li>"Help me set privacy settings"</li>
+                <li>"How can I make my posts private?"</li>
             </ul>
         </div>
     </div>
+
+  <div class="w3-row w3-padding-64" id="FriendInfo">
+    <div class="w3-twothird w3-container">
+        <h1 class="w3-text-teal">Get a friend's and/or my basic info</h1>
+        <p>
+            This feature helps with retreiving basic information like posts and friends lists.
+            With this information, the user can then use our language services to determine if a post is positive or not. 
+            The friends list can also be used to check if the user knows a certain person or not, since some cognitive disabilities makes remembering people very difficult.
+            You can ask the following to begin getting people's basic information.
+        </p>
+        <ul>
+            <li>"Can you get my friends list?"</li>
+            <li>"Can you get my friend's posts?"</li>
+            <li>"Can you get my posts?"</li>
+        </ul>
+    </div>
+  </div>
   
 
 

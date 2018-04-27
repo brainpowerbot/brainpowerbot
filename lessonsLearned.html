@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<title>Brainpower MessengerBot</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 430px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+<body>
+
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+      <a href="https://www.colemaninstitute.org/" target="_blank" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
+      <a href="index.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About the project</a>
+      <a href="features.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Features</a>
+      <a href="research.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research Documents</a>
+      <a href="lessonsLearned.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons Learned</a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_open()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Try our chatbot here!</b></h4>
+  <div>
+    <iframe height="700" width="430" aria-label="Demo" src="https://bot.dialogflow.com/aa9e5ce3-1b2c-4a85-b463-dbeead245f78" style="border:none;"></iframe>
+  </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:420px">
+  <div class="w3-row w3-padding-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Lessons Learned</h1>
+      <p>
+        Short little blurb here
+      </p>
+      <ul>
+        <li><a href="#ResearchVs">Research vs. traditional project</a></li>
+        <li><a href="#PlatformRestriction">Social media platform restriction</a></li>
+        <li><a href="#ConductingResearch">Conducting research</a></li>
+        <li><a href="#FlexibleProject">Being flexible with project management</a></li>
+        <li><a href="#Important">Deciding what is important and what is not</a></li>
+        <li><a href="#WentWell">What went well</a></li>
+        <li><a href="#Improve">What could have been improved</a></li>
+      </ul>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="logo.jpg" height="212" width="291">
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="ResearchVs">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Research versus traditional project</h1>
+          <p>
+            One of the biggest challenges we had to overcome was the fact that this is a research project and not a traditional project
+            like typical school assignments.
+            None of us have done research in an academic environment before so we had to take time to get used to conducting research, 
+            how we kept track of progress being made or not, and balancing the amount of time researching versus actually getting something
+            coded. When doing research it is hard to tell what progress is being made when everyone is either still reading or gathering
+            resources to back up their claims. Not only that, but knowing where to begin looking for sources or data sets was difficult.
+            Figuring out the amount of time we should take to do research on something was difficult. We were not sure if we were
+            spending the right amount of time on something or spending too much time. After a while the team found a good amount of time
+            to spend on research to get progress done on the code as well.
+          </p>
+        </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="PlatformRestriction">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Social media platform restriction</h1>
+          <p>
+            The social media platform we wanted to use was Facebook. Facebook has the most information and connections that we can then
+            use to make our bot as helpful to our target audience as possible. Any other social media site did not have the depth
+            of information we were hoping to gain access to. The only issue, however, is that Facebook does have the data but we could
+            not access that data. Reading through the documents of what was possible with the Facebook API made us believe that we could
+            indeed access all the data we wanted. However, there was a section of the documents we neglected to read carefully that mentioned
+            access to this data was deprecated after a version update of the API. Since we were doing a ton of research at the same time,
+            it is difficult to get every single detail of what we were looking into. This API update removed access to most of the data that
+            was previously accessible and gave us a big roadblock to overcome to finish this project. We overcame this by creating a test environment
+            within Facebook that still gave us access to the information of these "test users" for our bot. Only in this test environment is this
+            possible, but it works wonders for a proof of concept.
+          </p>
+      </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="ConductingResearch">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Conducting research</h1>
+          <p>
+            Conducting research is harder than it may seem. While most of our team was used to just doing an assignment that was
+            given to them, this project was not that. Research implies that you give guidance for the project to yourself. Depending
+            on what you find out while reading or looking at data sets, you decide where to go next. Not only that but managing
+            time researching versus making progress to your project is a challenge. Most of us also learned pretty quickly that finding
+            good data sets or articles to read is also difficult. You have to keep in mind the time this data was published and how
+            relevant it is now. You have to make sure that you are not wasting time reading something that is not getting at what you want.
+            At the end of it all we all learned a ton throughout this project and without conducting research, that would not
+            have been possible.
+          </p>
+      </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="FlexibleProject">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Beign flexible with project management</h1>
+          <p>
+              We realized very quickly that in a research project the only guidance that is given, in terms of a path for work 
+              on the project, is given mainly by the team itself. That was a challenge for us since, again, everyone on our team was 
+              used to having someone else say what to do. Most of us were accustomed to how we were taught industry works. Most tech companies
+              do things the same way. The project management style they use is called Agile. You get a task to do and have frequent checks with
+              somebody to make sure you are on the right track. With this project, however, that was not going to work. Mainly because our tasks
+              were not specified at all. Our tasks were more like "figure out what framework we can use". That is as ambigious as it can get.
+              With this being a research based project we needed to make sure we were still making progress and not be wasting too much time, 
+              so we abandoned Agile. This took some time to get used to but once we got into the right ammount of time to take researching
+              a topic, development went smoothly.
+          </p>
+      </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="Important">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">Deciding what is important and what is not</h1>
+          <p>
+            As mentioned before, deciding when it was time to put research to the side and get some development done was crucial.
+            Just as crucial, though, was knowing what was important enough to make sure all the right research was done before development
+            starts. The choice of our bot framework, for example, was important to take our time on conducting research for. 
+            If we chose the wrong framework and a lot of development time was already put into it and we find out that the framework 
+            will no longer work for us, that is a lot of time wasted. To keep that from happening we made sure that decisions like that
+            were made with complete certainty. We also had to learn when to make quick decisions where the topics were not necessarily 
+            too important. Throughout the semester we realized that we were making decisions a lot faster than when we first started out
+            with the project. 
+          </p>
+      </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="WentWell">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">What went well</h1>
+          <p>
+            What went well in general throughout this project was the following:
+          </p>
+          <ul>
+            <li>Frequent team meetings to keep track of progress being made</li>
+            <li>Everyone on the team was held accountable and everyone got their tasks done</li>
+            <li>Having deadlines for sponsors motivated us to get progress done</li>
+          </ul>
+      </div>
+  </div>
+
+  <div class="w3-row w3-padding-64" id="Improve">
+      <div class="w3-twothird w3-container">
+          <h1 class="w3-text-teal">What could have been improved</h1>
+          <p>
+            What could have been improved upon are the following:
+          </p>
+          <ul>
+            <li>Personal deadlines kept getting pushed back</li>
+            <li>The class as a whole was put lower in people's priorities throughout the year</li>
+            <li>Having a noisy meeting place was distracting</li>
+          </ul>
+      </div>
+  </div>
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+    if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+    } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+    }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>

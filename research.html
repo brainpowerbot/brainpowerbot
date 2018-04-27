@@ -22,10 +22,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
     <div class="w3-top">
     <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
         <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
-        <a href="https://www.colemaninstitute.org/" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
+        <a href="https://www.colemaninstitute.org/" target="_blank" class="w3-bar-item w3-button w3-theme-l1">Brainpower MessengerBot sponsored by CU Coleman Institute</a>
         <a href="index.htm" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About the project</a>
         <a href="features.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Features</a>
         <a href="research.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Research Documents</a>
+        <a href="lessonsLearned.html" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Lessons Learned</a>
     </div>
     </div>
 
@@ -53,8 +54,11 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
                 A lot of research went into this project and this section will highlight all the big decisions taken and why we chose them.
             </p>
             <ul>
-                    <li><a href="">Framework choice</a></li>
+                <li><a href="#FrameworkChoice">Bot framework choice</a></li>
                 <li><a href="#Facebook">Facebook & Facebook API limitations</a></li>
+                <li><a href="#RiskManagement">Risk management</a></li>
+                <li><a href="#TestingPractices">Testing practices</a></li>
+                <li><a href="#DeploymentPractices">Deployment practices</a></li>
             </ul>
         </div>
         <div class="w3-third w3-container">
@@ -62,9 +66,29 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
         </div>
     </div>
 
-    <div class="w3-row w3-padding-64">
+    <div class="w3-row w3-padding-64" id="FrameworkChoice">
         <div class="w3-twothird w3-container">
-        <h1 class="w3-text-teal" id="Facebook">Facebook & Facebook API Limitations</h1>
+            <h1 class="w3-text-teal">Bot framework choice</h1>
+            <p>
+                Since the beginning of the semester we knew that building a chat bot framework from scratch and then
+                still implement the features we wanted our bot to have, would be near impossible. Since this was the case
+                a decision was made to look into frameworks that already existed. 
+            </p>
+            <p>
+                Since this was something that could not easily be changed in the middle of a semester, we decided it would be best
+                to take our time in deciding what framework to use. Our team knew that if we
+                chose a framework that would end up not being what we wanted it to be, it would force us to start from scratch and lose
+                all the work we had up to that point. Our strategy to try and pick the right platform for us was to spread out the research work
+                and have everyone take a look at one or two frameworks and learn as much about it as possible. 
+                After this, <a href="Research/Bot Framework Spreadsheet.pdf" target="_blank">we compiled a spreadsheet</a> 
+                to determine which framework would best fit our needs and Dialogflow was what we ended up going with.
+            </p>
+        </div>
+    </div>
+    
+    <div class="w3-row w3-padding-64" id="Facebook">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Facebook & Facebook API Limitations</h1>
             <p>
                 The reason for making an entire project around Facebook is because Facebook can provide more details of relantionships
                 between people better than any other social media platform. Facebook has more information and connections that we can then
@@ -76,7 +100,39 @@ html,body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif;}
                 API. With these data restrictions in place, it was very difficult getting the information we needed for this project. 
                 Instead, what we decided to do was create a test environment where we could have staged data to come up with a proof
                 of concept for our ideas. For a full understanding of what data exactly we were not allowed access to please download
-                our <a href="">Facebook API reaserch document.</a>
+                our <a href="Research/FB API Research.pdf" target="_blank">Facebook API reaserch document.</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="w3-row w3-padding-64" id="RiskManagement">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Risk management</h1>
+            <p>
+                As part of managing a project, risk management is important to consider especially for a year long project. 
+                Some risks that could affect us were put <a href="Research/Brainpower Risks Spreadsheet.pdf" target="_blank">into a spreadsheet</a> early on in the project.
+                We then went on and used a ranking system to determine which risks were worth keeping track of.
+                This spreadsheet is meant to be a "living document", meaning we are constantly updating it, and we were making sure that
+                the highest ranking risks were not an issue.
+            </p>
+        </div>
+    </div>
+
+    <div class="w3-row w3-padding-64" id="TestingPractices">
+        <div class="w3-twothird w3-container">
+            <h1 class="w3-text-teal">Testing practices</h1>
+            <p>
+                Another thing worth tracking and keeping up to date is our testing practices. 
+                Since our bot takes in data from people using it to better itself, we had a test script to use on the bot 
+                and check expected results. An example testing checklist can be seen <a href="Research/Testing Checklist.pdf" target="_blank">here.</a> We wanted to make sure that all the work
+                we were doing, worked how we expected it to so we constantly tested our bot this way.
+            </p>
+            <p>
+                We decided on having a manual test checklist instead of other forms of testing because this chat bot is very much user based.
+                Automation testing as we made changes to the bot and deployed new code, we thought, was unecessary
+                since most changes did not have drastic changes to the bot's behaviour.
+                We were mainly trying to get the bot to recognize either set phrases or keywords so it knew what to do.
+                Keeping track of a manual testing checklist is what we decided would be best for this project.
             </p>
         </div>
     </div>
